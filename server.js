@@ -7,6 +7,7 @@ app.use(express.static(join(__dirname, 'client', 'build')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
+//bringing routes
 app.use(require('./routes'))
 
 app.get('*', (req, res) => {
